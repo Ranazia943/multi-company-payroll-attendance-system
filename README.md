@@ -37,3 +37,4 @@ A full-featured, multi-company HR & Payroll Management System built with PHP & M
 - Exportable reports (CSV, PDF options recommended)
 
 
+NOTE: FOR SCREENSHOT CHECK ZIP FILE SCREENSHOT.ZIP ABOVE .
