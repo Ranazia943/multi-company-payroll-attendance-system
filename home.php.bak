@@ -1,0 +1,170 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+
+	
+</head>  
+<body>
+<?php include 'db_connect.php ?>
+	
+
+<div class="container-fluid pt-4 px-4">
+                <div class="row g-4 text-white">
+                    <div class="col-sm-6 col-xl-3 ">
+                       <a href="index.php?page=present_employee" style='color:white;'>
+						   <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-3">
+							<i class="fa fa-solid fa-users fa-2x"></i>
+                            <div class="mx-auto">
+                                <p class="mb-2">Total Employee</p>
+                                <hr color=white>
+                                <?php
+								$conn=mysqli_connect("localhost","root","","payroll");
+								$qry="SELECT id FROM employee ORDER BY id";
+								$data=mysqli_query($conn,$qry);
+								
+									
+									$row=mysqli_num_rows($data);
+										
+									print '<h5>' .$row. '</h5>';
+								
+								
+								
+								?>
+							
+								<center>
+                                
+									</center>
+                            </div>
+                        </div>
+						  </a>
+
+                    </div>
+					
+                    <div class="col-sm-6 col-xl-3">
+						<a href="index.php?page=present_employee" style='color:white;'>
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-3">
+							<i class="fa fa-solid fa-users fa-2x"></i>
+							
+                            <div class="mx-auto">
+							
+									<p class="mb-2">Present Employee</p>
+                                <hr color=white>
+								<center>
+								
+                                
+						<?php
+								$conn=mysqli_connect("localhost","root","","payroll");
+								$qry="SELECT employee_id  FROM attendance group by employee_id";
+								
+								$data=mysqli_query($conn,$qry);
+								
+								$row=mysqli_num_rows($data);
+								
+								print '<h3>' . $row. '</h3>';
+								?>
+						
+									</center>
+                            </div>
+                        </div>
+                    </div>
+						</a>
+					
+                    <div class="col-sm-6 col-xl-3">
+						<a href="index.php?page=employee" style='color:white;'>
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-3">
+							<i class="fa fa-solid fa-users fa-2x"></i>
+                            <div class="mx-auto">
+                                <p class="mb-2">On Leave Employee</p>
+                               <hr color=white>
+								<center>
+                                <h6 class="mb-0">890</h6>
+									</center>
+                            </div>
+                        </div>
+						</a>
+                    </div>
+						
+                    <div class="col-sm-6 col-xl-3">
+						<a href="index.php?page=employee" style='color:white;'>
+						
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-3">
+							<i class="fa fa-solid fa-users fa-2x"></i>
+                            <div class="mx-auto">
+                                <p class="mb-2"> Absent Employee</p>
+                                <hr color=white>
+								<center>
+                                <h6 class="mb-0">10</h6>
+									</center>
+                            </div>
+                        </div>
+						</a>
+                    </div>
+					
+					
+                </div>
+            </div>
+	
+	<div class="container-fluid pt-4 px-4">
+                <div class="row g-4 text-white">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-3">
+                            <i class="fa fa-solid fa-handshake fa-2x"></i>
+                            <div class="mx-auto">
+                                <p class="mb-2">Today Interview</p>
+								<hr color=white>
+								<center>
+                                <h6 class="mb-0">3</h6>
+									</center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+						
+						<a href="index.php?page=allowances" style='color:white;'>
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-3">
+                          <i class="fa fa-regular fa-list fa-2x"></i>    
+							<div class="mx-auto">
+                                <p class="mb-2"> Allowances</p>
+								<hr color=white>
+								<center>
+                                <h6 class="mb-0">5</h6>
+									</center>
+                            </div>
+                        </div>
+						</a>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-3">
+                            <i class="fa fa-solid fa-fingerprint fa-2x"></i>
+                            <div class="mx-auto">
+                                <p class="mb-2">Biometric Device</p>
+								<hr color=white>
+								<center>
+                                <h6 class="mb-0">1</h6>
+									</center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+						<a href="index.php?page=attendance" style='color:white;'>
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-2">
+                            <i class="fa fa-solid fa-user-check fa-2x p-1"></i>
+                            <div class="mx-auto">
+                                <p class="mb-auto pt-2"> Employee Attendance</p>
+								<hr color=white>
+								<center>
+                                <h6 class="mb-2">1</h6>
+									</center>
+                            </div>
+                        </div>
+						</a>
+                    </div>
+					
+					
+                </div>
+           
+			
+		
+</body>
+</html>
